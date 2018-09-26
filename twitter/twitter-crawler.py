@@ -1,6 +1,5 @@
-import tweepy
 
-from site_crawler.twitter.credentials import Credentials
+from twitter.credentials import Credentials
 
 
 c = Credentials()
