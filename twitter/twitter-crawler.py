@@ -13,14 +13,14 @@ api = credentials.authentinticate_twitter()
 
 today = datetime.date.today()
 path = "../dataset/crawled/"+str(today)
-os.mkdir(path)
+# os.mkdir(path)
 
 hashtags =[
-    'BeingBahati'
-    'AuntieBoss',
-    'theTrend',
-    'HeyAmina',
-    'WickedEdition',
+    # 'BeingBahati'
+    # 'AuntieBoss',
+    # 'theTrend',
+    # 'HeyAmina',
+    'WickedEdition'
     'Mafundi',
     'PressPass',
     'LivingWithEss',
