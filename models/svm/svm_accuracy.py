@@ -7,6 +7,7 @@ from sklearn.metrics import roc_curve, auc
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.metrics import confusion_matrix
 
 def readcsv():
     data = pd.read_csv("../../Dataset.csv")
@@ -47,6 +48,10 @@ def svm_accuracy(X, y):
     print("SVM metrics")
     print(metrics.accuracy_score(y_test, ypred))
     print(metrics.classification_report(y_test, ypred))
+    print("confusion matrix")
+    print(confusion_matrix(y_test, ypred))
+    tn, fp, fn, tp = confusion_matrix(y_test, ypred).ravel()
+    print(tn, fp, fn, tp)
     drawrocSVM(y_test, ypred)
 
 def main():
